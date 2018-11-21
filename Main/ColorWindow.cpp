@@ -12,7 +12,7 @@
 
 #include <Alert.h>
 #include <Application.h>
-#include <iostream.h>
+#include <iostream>
 #include <MenuItem.h>
 #include <Message.h>
 #include <PopUpMenu.h>
@@ -49,6 +49,7 @@ ColorWindow::ColorWindow()
 	if (prefs.FindBool("window_all_workspaces")) {
 		SetWorkspaces( B_ALL_WORKSPACES );
 	}
+	
 
 }
 
