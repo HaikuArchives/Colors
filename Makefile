@@ -1,4 +1,4 @@
-## Haiku Generic Makefile ##
+## Haiku Generic Makefile v2.6 ##
 
 ## Fill in this file to specify the project being created, and the referenced
 ## Makefile-Engine will do all of the hard work for you. This handles any
@@ -15,7 +15,7 @@ NAME = Colors
 TYPE = APP
 
 # 	If you plan to use localization, specify the application's MIME signature.
-APP_MIME_SIG = 
+APP_MIME_SIG = "application/x-vnd.pecora-colors"
 
 #	The following lines tell Pe and Eddie where the SRCS, RDEFS, and RSRCS are
 #	so that Pe and Eddie can fill them in for you.
