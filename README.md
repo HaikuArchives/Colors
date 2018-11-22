@@ -1,6 +1,6 @@
 # Colors
 **Colors!** is a color picker like that in Adobe Photoshop.
-Found a color you want and use drag & drop to copy it to your application.
+Find a color you want and use drag & drop to copy it to your application.
 
 ![Colors screenshot](Colors.png "Colors")
 
