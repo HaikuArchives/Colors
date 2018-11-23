@@ -15,12 +15,14 @@
 App::App()
 :	BApplication("application/x-vnd.pecora-colors") {
 
-	(new ColorWindow())->Show();
+	ColorWindow *aColorWin=new ColorWindow();
+	aColorWin->Show();
 
-	Run();
+	
 }
 
 int main() {
-	delete new App();
+	App *aApp=new App();
+	aApp->Run();
 	return 0;
 }

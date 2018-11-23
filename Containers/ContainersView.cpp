@@ -12,7 +12,7 @@
 
 #include <Application.h>
 #include <Bitmap.h>
-#include <iostream.h>
+#include <iostream>
 #include <Resources.h>
 #include <Window.h>
 

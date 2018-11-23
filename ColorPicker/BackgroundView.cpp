@@ -56,7 +56,7 @@ void BackgroundView::Draw( BRect bounds ) {
 		return;
 	}
 	
-	const char cursor_data[] = {
+	const int cursor_data[] = {
 
 		/* size, depth and hotspot y/x */
 		16, 1, 15, -1,
@@ -103,7 +103,8 @@ void BackgroundView::Draw( BRect bounds ) {
 		0x40, 0x00,
 		0x00, 0x00,
 	};
-			
+
+
 	BCursor	cursor(&cursor_data);
 	SetViewCursor(&cursor);
 	DrawBitmap( fBitmap );
@@ -242,7 +243,7 @@ rgb_color BackgroundView::ColorAt( BPoint pt ) {
 		} break;
 
 		default:
-			cerr << "Sorry, unknown colorspace: 0x" << hex << (uint64)fBitmap->ColorSpace() << endl;
+			std::cerr << "Sorry, unknown colorspace: 0x" << std::hex << (uint64)fBitmap->ColorSpace() << std::endl;
 	}			
 	return color;
 

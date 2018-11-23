@@ -95,6 +95,6 @@ BBitmap	*FetchImage(const char *imgname) {
 		return new BBitmap( &msg );
 	}
 
-	cerr << "*** Resource not found: " << imgname << endl;
+	std::cerr << "*** Resource not found: " << imgname << std::endl;
 	return 0;
 }

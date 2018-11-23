@@ -13,7 +13,7 @@
 #include <Application.h>
 #include <Bitmap.h>
 #include <Beep.h>
-#include <iostream.h>
+#include <iostream>
 #include <Font.h>
 #include <Message.h>
 #include <RadioButton.h>
@@ -89,7 +89,7 @@ void ColorPickerView::AttachedToWindow() {
 		SetViewBitmap(background);
 	}
 	else {
-		cerr << "*** Resource not found" << endl;
+		std::cerr << "*** Resource not found" << std::endl;
 	}
 
 	fColorField = new ColorField( BPoint(10.0, 10.0), fSelectedColorMode, *p );
@@ -423,7 +423,7 @@ void ColorPickerView::UpdateTextControls() {
 
 	Window()->DisableUpdates();
 
-	char	string[5];
+	char	string[8];
 
 	sprintf(string, "%d", round(h*60) );
 	fTextControl[0]->TextView()->SetText(string);
@@ -443,7 +443,7 @@ void ColorPickerView::UpdateTextControls() {
 	sprintf(string, "%d", round(b*255) );
 	fTextControl[5]->TextView()->SetText(string);
 
-	sprintf(string, "%.6X", (round(r*255)<<16)|(round(g*255)<<8)|round(b*255) );
+	sprintf(string, "%06X", round(r*255)*256^2+round(g*255)*256+round(b*255) );
 	fHexTextControl->TextView()->SetText(string);
 
 	Window()->EnableUpdates();
